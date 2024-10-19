@@ -188,3 +188,68 @@ export const AboutText = styled.div`
   }
 `; 
 
+export const CarouselContainer = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    max-width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+`;
+
+export const CarouselPage = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const CarouselImage = styled.img`
+  width: 30%;
+  height: 200px;
+  object-fit: fill;
+
+  @media (max-width: 1024px) {
+    width: 45%;
+    height: 150px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const CarouselButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  ${props => props.position === 'left' ? 'left: 10px;' : 'right: 10px;'}
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
+    ${props => props.position === 'left' ? 'left: 5px;' : 'right: 5px;'}
+  }
+`;
+
