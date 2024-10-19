@@ -252,4 +252,28 @@ export const CarouselButton = styled.button`
     ${props => props.position === 'left' ? 'left: 5px;' : 'right: 5px;'}
   }
 `;
+export const IconLinkContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
 
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+export const Icon = styled.img`
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+`;

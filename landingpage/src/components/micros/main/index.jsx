@@ -11,9 +11,13 @@ import {
     CarouselPage,
     CarouselImage,
     CarouselButton,
+    IconLinkContainer,
+    Icon
 } from './style';
 import titleimagephoto from '../../../assets/pinceishorizontal.jpg';
 import pfp from "../../../assets/pfp2.jpg";
+import behanceIcon from '../../../assets/behance.png';  // ícone do Behance
+import instagramIcon from '../../../assets/instagram.png';  // ícone do Instagram
 
 const Main = () => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -65,16 +69,27 @@ const Main = () => {
                 <h3>- Manoel de Barros</h3>
             </PoemContainer>
             <AboutContainer>
-                <AboutImage src={pfp} alt="Milenapfp"/>
-                <AboutText>
-                    <h1>Sobre mim</h1>
-                    <p>Milena Resende, 22, mineira. Arteira, faz aquarela, bordado, cerâmica e recicla papel.
-                    Dos títulos de gente grande, é Licenciada em Artes Visuais pela Universidade Federal
-                    de Juiz de Fora e professora da rede Estadual de Minas Gerais. Tem interesse em
-                    poéticas cotidianas, pesquisas em processo criativo, pertencimento e cadernos de
-                    artista. Sua criança interior brinca, rodopia... pinta e borda em seu coração.</p>
-                </AboutText>
-            </AboutContainer>
+        <AboutImage src={pfp} alt="Milenapfp" />
+        <AboutText>
+          <h1>Sobre mim</h1>
+          <p>
+            Milena Resende, 22, mineira. Arteira, faz aquarela, bordado, cerâmica
+            e recicla papel. Dos títulos de gente grande, é Licenciada em Artes
+            Visuais pela Universidade Federal de Juiz de Fora e professora da rede
+            Estadual de Minas Gerais. Tem interesse em poéticas cotidianas, pesquisas
+            em processo criativo, pertencimento e cadernos de artista. Sua criança
+            interior brinca, rodopia... pinta e borda em seu coração.
+          </p>
+          <IconLinkContainer>
+            <a href="https://www.behance.net/milenaresecf91/projects" target="_blank" rel="noopener noreferrer">
+              <Icon src={behanceIcon} alt="Behance" />
+            </a>
+            <a href="https://www.instagram.com/mil_resende" target="_blank" rel="noopener noreferrer">
+              <Icon src={instagramIcon} alt="Instagram" />
+            </a>
+          </IconLinkContainer>
+        </AboutText>
+      </AboutContainer>
             <CarouselContainer>
                 {renderCarouselPage(currentPage)}
                 <CarouselButton onClick={prevPage} position="left">&lt;</CarouselButton>
