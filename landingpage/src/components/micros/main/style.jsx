@@ -15,7 +15,7 @@ export const TitleContainer = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
-
+  margin-bottom: 2rem;
 
   h1 {
     font-family: 'Montserrat', sans-serif;
@@ -27,7 +27,7 @@ export const TitleContainer = styled.div`
     text-align: center;
   }
 
-    h3 {
+  h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2vw;
     color: #FFF;
@@ -41,7 +41,23 @@ export const TitleContainer = styled.div`
     height: 50vh;
 
     h1 {
-      font-size: 12vw;
+      font-size: 10vw;
+      top: 10%;
+    }
+
+    h3 {
+      font-size: 4vw;
+      top: 30%;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+      font-size: 8vw;
+    }
+
+    h3 {
+      font-size: 3vw;
     }
   }
 `;
@@ -49,6 +65,7 @@ export const TitleContainer = styled.div`
 export const TitleImage = styled.img`
   width: 100%;
   height: 100%;
+  object-fit: cover;
 `;
 
 export const PoemContainer = styled.div`
@@ -57,19 +74,43 @@ export const PoemContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 20vh;
+  padding: 2rem 0;
 
-
-  p{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2vw;
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    text-align: center;
   }
-  h3{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5vw;
-  position: relative;
-  left: 220px;
-  `
+  
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    margin-top: 1rem;
+    align-self: flex-end;
+    margin-right: 10%;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 4vw;
+    }
+
+    h3 {
+      font-size: 3vw;
+      margin-right: 5%;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    p {
+      font-size: 3vw;
+    }
+
+    h3 {
+      font-size: 2vw;
+    }
+  }
+`;
 
 export const AboutContainer = styled.div`
   display: flex;
@@ -77,35 +118,73 @@ export const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 70vh;
+  padding: 2rem 0;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    min-height: auto;
   }
 `;
 
 export const AboutImage = styled.img`
-  width: 40%;
-  height: auto;
-  max-height: 70vh;
+  width: 30%;
+  height: 50%;
   object-fit: cover;
+  margin-right: 2rem;
 
   @media (max-width: 768px) {
     width: 80%;
+    height: auto;
+    margin-right: 0;
     margin-bottom: 2rem;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 40%;
   }
 `;
 
 export const AboutText = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  padding: 0 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
 
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+
+  p { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: justify;
+  }
+    
   @media (max-width: 768px) {
     width: 80%;
+    align-items: center;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+    }
   }
-`;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 50%;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+`; 
+

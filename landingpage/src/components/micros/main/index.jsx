@@ -17,7 +17,12 @@
             <AboutContainer>
                 <AboutImage src = {pfp} alt="Milenapfp"/>
                 <AboutText>
-                    Sobre mim
+                    <h1>Sobre mim</h1>
+                    <p>Milena Resende, 22, mineira. Arteira, faz aquarela, bordado, cerâmica e recicla papel.
+Dos títulos de gente grande, é Licenciada em Artes Visuais pela Universidade Federal
+de Juiz de Fora e professora da rede Estadual de Minas Gerais. Tem interesse em
+poéticas cotidianas, pesquisas em processo criativo, pertencimento e cadernos de
+artista. Sua criança interior brinca, rodopia... pinta e borda em seu coração.</p>
                 </AboutText>
             </AboutContainer>
             </MainContainer>
